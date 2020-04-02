@@ -15,10 +15,10 @@ We propose a [Docker](https://www.docker.com) container to install and run [Exak
 
 ## 1) Run Local Code Analysis
 
-1. Install the exakat/exakat container:
+1. Install the sfrod/exakat-ci container:
 
     ``` sh
-	$ docker pull exakat/exakat
+	$ docker pull sfrod/exakat-ci:latest
 	```
 ### Use Cases
 
