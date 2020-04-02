@@ -42,7 +42,7 @@ We propose a [Docker](https://www.docker.com) container to install and run [Exak
 
 ## 2) Gitlab CI/CD Pipeline Intergration
 
-1. Add this stage in your .gitlab-ci.yml file. Or take a look a our template-gitlab-ci.yml file. Reports can be retrieved as artifacts at the end of the job. Analysis using Frameworks are in Text format named as Ext_'used Framework'_report.txt.
+1. Add this stage in your .gitlab-ci.yml file. Or take a look at our template-gitlab-ci.yml file. Reports can be retrieved as artifacts at the end of the job. Analysis using Frameworks are in Text format named as Ext_'used Framework'_report.txt.
 
     ``` yaml
     stages:
