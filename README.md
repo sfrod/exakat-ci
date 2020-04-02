@@ -26,18 +26,18 @@ We propose a [Docker](https://www.docker.com) container to install and run [Exak
 
     ``` sh
     $ mkdir reports
-	$ docker run -v <path/to/project/folder>:/src/ -v \ $(pwd)/reports:/report/ exakat-ci:latest
+	$ docker run -v <path/to/project/folder>:/src/ -v \ $(pwd)/reports:/report/ sfrod/exakat-ci:latest
     ```
 
 2. Run Exakat PHP analysis and creating a volume called 'reports' to fetch the reports:  
     ``` sh
-    $ docker run -v <path/to/project/folder>:/src/ -v reports:/report/ exakat-ci:latest
+    $ docker run -v <path/to/project/folder>:/src/ -v reports:/report/ sfrod/exakat-ci:latest
     ```
 
 3. Run Exakat PHP analysis based on a framework. Check all supported [Frameworks here.](https://exakat.readthedocs.io/en/latest/Extensions.html) : 
 
     ``` sh
-    $ docker run -v <path/to/project/folder>:/src/ -v reports:/report/ exakat-ci:latest Laravel
+    $ docker run -v <path/to/project/folder>:/src/ -v reports:/report/ sfrod/exakat-ci:latest Laravel
     ```
 
 ## 2) Gitlab CI/CD Pipeline Intergration
@@ -58,7 +58,7 @@ We propose a [Docker](https://www.docker.com) container to install and run [Exak
         SHARED_PATH: /builds/$CI_PROJECT_PATH/shared
         script:
         - mkdir -p ${SHARED_PATH}
-        - docker run -v $CI_PROJECT_DIR:/src -v ${SHARED_PATH}:/report sfrod/exakat-ci Laravel
+        - docker run -v $CI_PROJECT_DIR:/src -v ${SHARED_PATH}:/report sfrod/exakat-ci:latest Laravel
         artifacts:
         when: always
         paths:
