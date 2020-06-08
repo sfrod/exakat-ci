@@ -2,7 +2,7 @@
 [Exakat](https://www.exakat.io/) is a static analysis engine a tool for analyzing, reporting and assessing PHP code source efficiently and systematically. Exakat processes PHP 5.6 to 7.4 code, as well as reporting on security, performance, code quality, migration.
 Common best practices and recommendations for specific plat-forms such as Laravel, Wordpress, CakePHP or Drupal Framework are covered. Check all supported [Frameworks here.](https://exakat.readthedocs.io/en/latest/Extensions.html)
 
-We propose a [Docker](https://www.docker.com) container to install and run [Exakat](https://www.exakat.io/) 2.0.6 locally or as a part of a Static Application Security Testing (SAST) stage for Gitlab CI/CD Pipeline Integration. The resulted analysis reports can be retrieved as artifacts. See [Gitlab CI/CD Pipeline Intergration](#gitlab-ci/cd-pipeline-intergration) section.
+We propose a [Docker](https://www.docker.com) container to install and run [Exakat](https://www.exakat.io/) 2.0.6 locally or as a part of a Static Application Security Testing (SAST) stage for Gitlab CI/CD Pipeline Integration. The resulted analysis reports can be retrieved as artefacts. See [Gitlab CI/CD Pipeline Integration](#gitlab-ci/cd-pipeline-intergration) section.
 
 ## Built With
 
