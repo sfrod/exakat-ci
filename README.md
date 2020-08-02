@@ -37,7 +37,7 @@ We propose a [Docker](https://www.docker.com) container to install and run [Exak
 3. Run Exakat PHP analysis based on a framework. Check all supported [Frameworks here.](https://exakat.readthedocs.io/en/latest/Extensions.html) : 
 
     ``` sh
-    $ docker run -v <path/to/project/folder>:/src/ -v reports:/report/ sfrod/exakat-ci:latest Laravel
+    $ docker run -v <path/to/project/folder>:/src/ -v $(pwd)/reports:/report/ sfrod/exakat-ci:latest Laravel
     ```
 
 ## 2) Gitlab CI/CD Pipeline Intergration
