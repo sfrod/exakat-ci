@@ -1,20 +1,20 @@
 stages:
     - sast
-  
-  sast:
+
+sast:
     stage: sast
     image: docker:latest
     services: 
-      - docker:18-dind
+        - docker:18-dind
     variables:
-      DOCKER_DRIVER: overlay2
-      SHARED_PATH: /builds/$CI_PROJECT_PATH/shared
+        DOCKER_DRIVER: overlay2
+        SHARED_PATH: /builds/$CI_PROJECT_PATH/shared
     when: manual
     script:
-      - mkdir -p ${SHARED_PATH}
-      - docker run -v $CI_PROJECT_DIR:/src -v ${SHARED_PATH}:/report sfrod/exakat-ci Laravel
+        - mkdir -p ${SHARED_PATH}
+        - docker run -v $CI_PROJECT_DIR:/src -v ${SHARED_PATH}:/report sfrod/exakat-ci Laravel
     artifacts:
-       when: always
-       paths:
-         - /builds/$CI_PROJECT_PATH/shared/*
+        when: always
+        paths:
+            - /builds/$CI_PROJECT_PATH/shared/*
   
